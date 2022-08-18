@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Presentacion.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace Presentacion
 {
     public partial class Principal : Form
     {
-        public Principal()
+        public UsuarioEntidad usuarioEntidad { get; set; }
+
+        public Principal(UsuarioEntidad usuarioEntidad)
         {
             InitializeComponent();
+            this.usuarioEntidad = usuarioEntidad;
         }
 
         private void iconButton2_Click(object sender, EventArgs e)

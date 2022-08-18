@@ -33,20 +33,20 @@
             this.rjComboBox_Area = new RJCodeAdvance.RJControls.RJComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label_Error = new System.Windows.Forms.Label();
+            this.iconButton_Error = new FontAwesome.Sharp.IconButton();
             this.rjComboBox_Dispositivo = new RJCodeAdvance.RJControls.RJComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.rjComboBox_Urgencia = new RJCodeAdvance.RJControls.RJComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
             this.richTextBox_Descripcion = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_Asunto = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.iconButton_Error = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.iconButton_NUebasol = new FontAwesome.Sharp.IconButton();
             this.dataGridView_Realizadas = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
@@ -76,7 +76,7 @@
             this.panel_NuevaSolicitud.Controls.Add(this.textBox_Asunto);
             this.panel_NuevaSolicitud.Controls.Add(this.panel7);
             this.panel_NuevaSolicitud.ForeColor = System.Drawing.Color.Black;
-            this.panel_NuevaSolicitud.Location = new System.Drawing.Point(14, 50);
+            this.panel_NuevaSolicitud.Location = new System.Drawing.Point(114, 12);
             this.panel_NuevaSolicitud.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel_NuevaSolicitud.Name = "panel_NuevaSolicitud";
             this.panel_NuevaSolicitud.Size = new System.Drawing.Size(474, 354);
@@ -129,6 +129,22 @@
             this.label_Error.TabIndex = 20;
             this.label_Error.Text = "Error";
             this.label_Error.Visible = false;
+            // 
+            // iconButton_Error
+            // 
+            this.iconButton_Error.FlatAppearance.BorderSize = 0;
+            this.iconButton_Error.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton_Error.IconChar = FontAwesome.Sharp.IconChar.Warning;
+            this.iconButton_Error.IconColor = System.Drawing.Color.Red;
+            this.iconButton_Error.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton_Error.IconSize = 25;
+            this.iconButton_Error.Location = new System.Drawing.Point(133, 321);
+            this.iconButton_Error.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.iconButton_Error.Name = "iconButton_Error";
+            this.iconButton_Error.Size = new System.Drawing.Size(43, 25);
+            this.iconButton_Error.TabIndex = 19;
+            this.iconButton_Error.UseVisualStyleBackColor = true;
+            this.iconButton_Error.Visible = false;
             // 
             // rjComboBox_Dispositivo
             // 
@@ -208,6 +224,21 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Descripcion";
             // 
+            // iconButton4
+            // 
+            this.iconButton4.FlatAppearance.BorderSize = 0;
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.iconButton4.IconColor = System.Drawing.Color.Black;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.IconSize = 30;
+            this.iconButton4.Location = new System.Drawing.Point(422, 319);
+            this.iconButton4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(38, 27);
+            this.iconButton4.TabIndex = 5;
+            this.iconButton4.UseVisualStyleBackColor = true;
+            // 
             // rjButton1
             // 
             this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(97)))), ((int)(((byte)(209)))));
@@ -272,48 +303,6 @@
             this.panel7.Size = new System.Drawing.Size(470, 35);
             this.panel7.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nueva Solicitud";
-            // 
-            // iconButton_Error
-            // 
-            this.iconButton_Error.FlatAppearance.BorderSize = 0;
-            this.iconButton_Error.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton_Error.IconChar = FontAwesome.Sharp.IconChar.Warning;
-            this.iconButton_Error.IconColor = System.Drawing.Color.Red;
-            this.iconButton_Error.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton_Error.IconSize = 25;
-            this.iconButton_Error.Location = new System.Drawing.Point(133, 321);
-            this.iconButton_Error.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.iconButton_Error.Name = "iconButton_Error";
-            this.iconButton_Error.Size = new System.Drawing.Size(43, 25);
-            this.iconButton_Error.TabIndex = 19;
-            this.iconButton_Error.UseVisualStyleBackColor = true;
-            this.iconButton_Error.Visible = false;
-            // 
-            // iconButton4
-            // 
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.iconButton4.IconColor = System.Drawing.Color.Black;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 30;
-            this.iconButton4.Location = new System.Drawing.Point(422, 319);
-            this.iconButton4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(38, 27);
-            this.iconButton4.TabIndex = 5;
-            this.iconButton4.UseVisualStyleBackColor = true;
-            // 
             // iconButton3
             // 
             this.iconButton3.FlatAppearance.BorderSize = 0;
@@ -328,6 +317,17 @@
             this.iconButton3.Size = new System.Drawing.Size(26, 23);
             this.iconButton3.TabIndex = 1;
             this.iconButton3.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nueva Solicitud";
             // 
             // iconButton_NUebasol
             // 
@@ -357,7 +357,7 @@
             // 
             this.dataGridView_Realizadas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView_Realizadas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView_Realizadas.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_Realizadas.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView_Realizadas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_Realizadas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView_Realizadas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -384,7 +384,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(276, 22);
+            this.label7.Location = new System.Drawing.Point(320, 22);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(154, 25);

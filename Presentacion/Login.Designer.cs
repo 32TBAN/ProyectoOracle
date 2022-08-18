@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
             this.rjTextBox_Contrasenia = new RJCodeAdvance.RJControls.RJTextBox();
             this.rjTextBox_Usuario = new RJCodeAdvance.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label_Error = new System.Windows.Forms.Label();
+            this.iconButton_Error = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +50,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(290, 431);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.inicio;
+            this.pictureBox1.Location = new System.Drawing.Point(28, 128);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(230, 182);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // rjButton1
             // 
@@ -143,15 +155,32 @@
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // pictureBox1
+            // label_Error
             // 
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.inicio;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 128);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(230, 182);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.label_Error.AutoSize = true;
+            this.label_Error.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Error.ForeColor = System.Drawing.Color.Black;
+            this.label_Error.Location = new System.Drawing.Point(343, 238);
+            this.label_Error.Name = "label_Error";
+            this.label_Error.Size = new System.Drawing.Size(33, 14);
+            this.label_Error.TabIndex = 15;
+            this.label_Error.Text = "Error";
+            this.label_Error.Visible = false;
+            // 
+            // iconButton_Error
+            // 
+            this.iconButton_Error.FlatAppearance.BorderSize = 0;
+            this.iconButton_Error.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton_Error.IconChar = FontAwesome.Sharp.IconChar.Warning;
+            this.iconButton_Error.IconColor = System.Drawing.Color.Red;
+            this.iconButton_Error.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton_Error.IconSize = 25;
+            this.iconButton_Error.Location = new System.Drawing.Point(305, 236);
+            this.iconButton_Error.Name = "iconButton_Error";
+            this.iconButton_Error.Size = new System.Drawing.Size(37, 25);
+            this.iconButton_Error.TabIndex = 14;
+            this.iconButton_Error.UseVisualStyleBackColor = true;
+            this.iconButton_Error.Visible = false;
             // 
             // Login
             // 
@@ -159,6 +188,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
             this.ClientSize = new System.Drawing.Size(709, 431);
+            this.Controls.Add(this.label_Error);
+            this.Controls.Add(this.iconButton_Error);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.rjButton1);
@@ -170,6 +201,7 @@
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown_1);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -186,6 +218,8 @@
         private RJCodeAdvance.RJControls.RJTextBox rjTextBox_Contrasenia;
         private RJCodeAdvance.RJControls.RJTextBox rjTextBox_Usuario;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_Error;
+        private FontAwesome.Sharp.IconButton iconButton_Error;
     }
 }
 

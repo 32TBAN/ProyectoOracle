@@ -52,6 +52,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -71,12 +72,30 @@
     <Compile Include="AgregarPerfil.Designer.cs">
       <DependentUpon>AgregarPerfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Asignacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asignacion.Designer.cs">
+      <DependentUpon>Asignacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calificacion.Designer.cs">
+      <DependentUpon>Calificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Conexion.cs" />
+    <Compile Include="Datos\UsuarioDatos.cs" />
+    <Compile Include="Entidades\TipoPerfilEntidad.cs" />
+    <Compile Include="Entidades\UsuarioEntidad.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mensajes.cs" />
+    <Compile Include="Negocio\UsuarioNegocio.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +112,9 @@
     </Compile>
     <EmbeddedResource Include="AgregarPerfil.resx">
       <DependentUpon>AgregarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asignacion.resx">
+      <DependentUpon>Asignacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
