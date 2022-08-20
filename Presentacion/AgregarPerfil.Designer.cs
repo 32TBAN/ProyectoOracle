@@ -30,12 +30,11 @@
         {
             this.label_Error = new System.Windows.Forms.Label();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
-            this.rjComboBox_TipoPerfil = new RJCodeAdvance.RJControls.RJComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.rjTextBox_Contrasenia = new RJCodeAdvance.RJControls.RJTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.rjTextBox_Email = new RJCodeAdvance.RJControls.RJTextBox();
+            this.rjTextBox_nICKNAME = new RJCodeAdvance.RJControls.RJTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.rjTextBox_Apellido = new RJCodeAdvance.RJControls.RJTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.iconButton_Error = new FontAwesome.Sharp.IconButton();
             this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.comboBox_TipoPerfil = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label_Error
@@ -75,30 +75,7 @@
             this.rjButton1.Text = "Guardar";
             this.rjButton1.TextColor = System.Drawing.Color.Black;
             this.rjButton1.UseVisualStyleBackColor = false;
-            // 
-            // rjComboBox_TipoPerfil
-            // 
-            this.rjComboBox_TipoPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjComboBox_TipoPerfil.BorderColor = System.Drawing.Color.Black;
-            this.rjComboBox_TipoPerfil.BorderSize = 1;
-            this.rjComboBox_TipoPerfil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox_TipoPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rjComboBox_TipoPerfil.ForeColor = System.Drawing.Color.White;
-            this.rjComboBox_TipoPerfil.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(207)))), ((int)(((byte)(141)))));
-            this.rjComboBox_TipoPerfil.Items.AddRange(new object[] {
-            "Gerente",
-            "Jefe Técnico",
-            "Técnico",
-            "Usuario"});
-            this.rjComboBox_TipoPerfil.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(36)))), ((int)(((byte)(64)))));
-            this.rjComboBox_TipoPerfil.ListTextColor = System.Drawing.Color.White;
-            this.rjComboBox_TipoPerfil.Location = new System.Drawing.Point(170, 259);
-            this.rjComboBox_TipoPerfil.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox_TipoPerfil.Name = "rjComboBox_TipoPerfil";
-            this.rjComboBox_TipoPerfil.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox_TipoPerfil.Size = new System.Drawing.Size(377, 30);
-            this.rjComboBox_TipoPerfil.TabIndex = 29;
-            this.rjComboBox_TipoPerfil.Texts = "";
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // label7
             // 
@@ -155,27 +132,27 @@
             this.label5.TabIndex = 25;
             this.label5.Text = "Nickname";
             // 
-            // rjTextBox_Email
+            // rjTextBox_nICKNAME
             // 
-            this.rjTextBox_Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox_Email.BorderColor = System.Drawing.Color.Black;
-            this.rjTextBox_Email.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.rjTextBox_Email.BorderRadius = 5;
-            this.rjTextBox_Email.BorderSize = 2;
-            this.rjTextBox_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox_Email.ForeColor = System.Drawing.Color.White;
-            this.rjTextBox_Email.Location = new System.Drawing.Point(170, 153);
-            this.rjTextBox_Email.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox_Email.Multiline = false;
-            this.rjTextBox_Email.Name = "rjTextBox_Email";
-            this.rjTextBox_Email.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox_Email.PasswordChar = false;
-            this.rjTextBox_Email.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.rjTextBox_Email.PlaceholderText = "Nickname";
-            this.rjTextBox_Email.Size = new System.Drawing.Size(380, 31);
-            this.rjTextBox_Email.TabIndex = 24;
-            this.rjTextBox_Email.Texts = "";
-            this.rjTextBox_Email.UnderlinedStyle = false;
+            this.rjTextBox_nICKNAME.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox_nICKNAME.BorderColor = System.Drawing.Color.Black;
+            this.rjTextBox_nICKNAME.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.rjTextBox_nICKNAME.BorderRadius = 5;
+            this.rjTextBox_nICKNAME.BorderSize = 2;
+            this.rjTextBox_nICKNAME.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox_nICKNAME.ForeColor = System.Drawing.Color.White;
+            this.rjTextBox_nICKNAME.Location = new System.Drawing.Point(170, 153);
+            this.rjTextBox_nICKNAME.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox_nICKNAME.Multiline = false;
+            this.rjTextBox_nICKNAME.Name = "rjTextBox_nICKNAME";
+            this.rjTextBox_nICKNAME.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox_nICKNAME.PasswordChar = false;
+            this.rjTextBox_nICKNAME.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.rjTextBox_nICKNAME.PlaceholderText = "Nickname";
+            this.rjTextBox_nICKNAME.Size = new System.Drawing.Size(380, 31);
+            this.rjTextBox_nICKNAME.TabIndex = 24;
+            this.rjTextBox_nICKNAME.Texts = "";
+            this.rjTextBox_nICKNAME.UnderlinedStyle = false;
             // 
             // label3
             // 
@@ -209,6 +186,7 @@
             this.rjTextBox_Apellido.TabIndex = 22;
             this.rjTextBox_Apellido.Texts = "";
             this.rjTextBox_Apellido.UnderlinedStyle = false;
+            this.rjTextBox_Apellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rjTextBox_Apellido_KeyPress_1);
             // 
             // label2
             // 
@@ -242,6 +220,7 @@
             this.rjTextBox_Nombre.TabIndex = 20;
             this.rjTextBox_Nombre.Texts = "";
             this.rjTextBox_Nombre.UnderlinedStyle = false;
+            this.rjTextBox_Nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rjTextBox_Apellido_KeyPress_1);
             // 
             // iconButton_Error
             // 
@@ -277,6 +256,7 @@
             this.rjButton2.Text = "Cancelar";
             this.rjButton2.TextColor = System.Drawing.Color.Black;
             this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // iconButton2
             // 
@@ -293,6 +273,19 @@
             this.iconButton2.Size = new System.Drawing.Size(19, 18);
             this.iconButton2.TabIndex = 34;
             this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // comboBox_TipoPerfil
+            // 
+            this.comboBox_TipoPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.comboBox_TipoPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox_TipoPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_TipoPerfil.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_TipoPerfil.FormattingEnabled = true;
+            this.comboBox_TipoPerfil.Location = new System.Drawing.Point(171, 268);
+            this.comboBox_TipoPerfil.Name = "comboBox_TipoPerfil";
+            this.comboBox_TipoPerfil.Size = new System.Drawing.Size(375, 22);
+            this.comboBox_TipoPerfil.TabIndex = 35;
             // 
             // AgregarPerfil
             // 
@@ -300,17 +293,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(670, 429);
+            this.Controls.Add(this.comboBox_TipoPerfil);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.label_Error);
             this.Controls.Add(this.iconButton_Error);
             this.Controls.Add(this.rjButton1);
-            this.Controls.Add(this.rjComboBox_TipoPerfil);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.rjTextBox_Contrasenia);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.rjTextBox_Email);
+            this.Controls.Add(this.rjTextBox_nICKNAME);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.rjTextBox_Apellido);
             this.Controls.Add(this.label2);
@@ -327,17 +320,17 @@
         private System.Windows.Forms.Label label_Error;
         private FontAwesome.Sharp.IconButton iconButton_Error;
         private RJCodeAdvance.RJControls.RJButton rjButton1;
-        private RJCodeAdvance.RJControls.RJComboBox rjComboBox_TipoPerfil;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private RJCodeAdvance.RJControls.RJTextBox rjTextBox_Contrasenia;
         private System.Windows.Forms.Label label5;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox_Email;
+        private RJCodeAdvance.RJControls.RJTextBox rjTextBox_nICKNAME;
         private System.Windows.Forms.Label label3;
         private RJCodeAdvance.RJControls.RJTextBox rjTextBox_Apellido;
         private System.Windows.Forms.Label label2;
         private RJCodeAdvance.RJControls.RJTextBox rjTextBox_Nombre;
         private RJCodeAdvance.RJControls.RJButton rjButton2;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.ComboBox comboBox_TipoPerfil;
     }
 }

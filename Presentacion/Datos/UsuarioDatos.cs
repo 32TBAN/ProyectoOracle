@@ -11,6 +11,35 @@ namespace Presentacion.Datos
 {
     public class UsuarioDatos : Conexion
     {
+
+        public static UsuarioEntidad Guardar(UsuarioEntidad usuarioEntidad)
+        {
+            try
+            {
+                using (OracleConnection connection = Conexion.ObtenerConexion())
+                {
+                    connection.Open();
+                    using (OracleCommand cmd = new OracleCommand("GuardarUsuarios", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("nombreG", OracleType.VarChar).Value = usuarioEntidad.Nombre;
+                        cmd.Parameters.Add("apellidoG", OracleType.VarChar).Value = usuarioEntidad.Apellido;
+                        cmd.Parameters.Add("nicknameG", OracleType.VarChar).Value = usuarioEntidad.Nickname;
+                        cmd.Parameters.Add("perfilG", OracleType.Number).Value = usuarioEntidad.NumPerfil;
+                        cmd.Parameters.Add("contraseG", OracleType.VarChar).Value = usuarioEntidad.Contraseña;
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                return usuarioEntidad;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+        }
+
         public static UsuarioEntidad BuscarUsuarioNickname(string texts)
         {
             try
@@ -20,10 +49,10 @@ namespace Presentacion.Datos
                 using (OracleConnection connection = Conexion.ObtenerConexion())
                 {
                     connection.Open();
-                    using (OracleCommand cmd = new OracleCommand("BuscarUsuario", connection))
+                    using (OracleCommand cmd = new OracleCommand("BuscarUsuarioNickname", connection))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add("nickname", OracleType.VarChar).Value = texts;
+                        cmd.Parameters.Add("nicknameB", OracleType.VarChar).Value = texts;
                         cmd.Parameters.Add("buscar", OracleType.Cursor).Direction = ParameterDirection.Output;
 
                         using (var dr = cmd.ExecuteReader())
@@ -58,7 +87,7 @@ namespace Presentacion.Datos
                 return null;
             }
         }
-        private static List<TipoPerfilEntidad> ListaTipoPerfil()
+        public static List<TipoPerfilEntidad> ListaTipoPerfil()
         {
             try
             {
@@ -72,10 +101,11 @@ namespace Presentacion.Datos
                         cmd.Parameters.Add("salida", OracleType.Cursor).Direction = ParameterDirection.Output;
                         using (var dr = cmd.ExecuteReader())
                         {
-                            if (dr.Read())
+                            while(dr.Read())
                             {
                                 tipoPerfilEntidad.Add(new TipoPerfilEntidad(
-                                    Convert.ToInt16(dr["ID_TIP"].ToString()), dr["NOM_TIPO"].ToString()));
+                                    Convert.ToInt16(dr["ID_TIP"].ToString()), 
+                                    dr["NOM_TIPO"].ToString()));
                             }
                         }
                     }
@@ -115,33 +145,7 @@ namespace Presentacion.Datos
             }
         }
 
-        public static UsuarioEntidad Guardar(UsuarioEntidad usuarioEntidad)
-        {
-            try
-            {
-                using (OracleConnection connection = Conexion.ObtenerConexion())
-                {
-                    connection.Open();
-                    using (OracleCommand cmd = new OracleCommand("GuardarUsuarios", connection))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add("nombreG", OracleType.VarChar).Value = usuarioEntidad.Nombre;
-                        cmd.Parameters.Add("apellidoG", OracleType.VarChar).Value = usuarioEntidad.Apellido;
-                        cmd.Parameters.Add("nicknameG", OracleType.VarChar).Value = usuarioEntidad.Nickname;
-                        cmd.Parameters.Add("perfilG", OracleType.Number).Value = usuarioEntidad.NumPerfil;
-                        cmd.Parameters.Add("contraseG", OracleType.VarChar).Value = usuarioEntidad.Contraseña;
-
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                return usuarioEntidad;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-
-        }
+      
 
         public static UsuarioEntidad BuscarUsuarioID(int idTecnico)
         {

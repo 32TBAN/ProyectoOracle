@@ -81,6 +81,46 @@ namespace Presentacion.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html lang=&quot;en&quot;&gt;
+        ///&lt;head&gt;
+        ///  &lt;title&gt;Document&lt;/title&gt;
+        ///  &lt;style&gt;
+        ///    *{
+        ///      padding: 10px;
+        ///    }
+        ///    .datos{
+        ///      float: left;
+        ///    }
+        ///      .fac {
+        ///      float: left;
+        ///      }
+        ///
+        ///   .datos1{
+        ///      float: left;
+        ///    }
+        ///    .datos2{
+        ///      float: left;
+        ///    }
+        ///  &lt;/style&gt;
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///    &lt;header&gt;
+        ///        &lt;h1&gt; Servicio al cliente &lt;/h1&gt;
+        ///
+        ///        &lt;div class=&quot;datos&quot;&gt;
+        ///            &lt;p&gt;Nombre: @nombre&lt;/p&gt;
+        ///            &lt;p&gt;Cedula: @cedula&lt;/p&gt;
+        ///            &lt;p&gt;Email: @email&lt;/p&gt;
+        ///         [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string Plantillapdf {
+            get {
+                return ResourceManager.GetString("Plantillapdf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap profile_icon_176363 {

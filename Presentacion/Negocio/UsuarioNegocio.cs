@@ -32,5 +32,10 @@ namespace Presentacion.Negocio
         {
             return UsuarioDatos.ListaUsuarios();
         }
+
+        internal static List<TipoPerfilEntidad> TiposUsuarios()
+        {
+            return UsuarioDatos.ListaTipoPerfil();
+        }
     }
 }
