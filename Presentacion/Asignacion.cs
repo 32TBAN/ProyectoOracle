@@ -22,7 +22,6 @@ namespace Presentacion
             InitializeComponent();
             CargarDataGrint();
         }
-
         private void CargarDataGrint()
         {
             List<UsuarioEntidad> usuariosTecnicos = new List<UsuarioEntidad>();
@@ -55,9 +54,11 @@ namespace Presentacion
             dataGridView_Solicitudes.Columns["IdUsuario"].Visible = false;
             dataGridView_Solicitudes.Columns["IdTecnico"].Visible = false;
             dataGridView_Solicitudes.Columns["Estado"].Visible = false;
-
+            dataGridView_Solicitudes.Columns["FechaEnvio"].Visible = false;
+            dataGridView_Solicitudes.Columns["FechaEntrega"].Visible = false;
+            dataGridView_Solicitudes.Columns["Respuesta"].Visible = false;
+            dataGridView_Solicitudes.Columns["Total"].Visible = false;
         }
-
         private void CargarSolucitudes()
         {
             dataGridView_Asignadas.DataSource = null;
@@ -66,10 +67,105 @@ namespace Presentacion
             dataGridView_Asignadas.Columns["IdUsuario"].Visible = false;
             dataGridView_Asignadas.Columns["IdTecnico"].Visible = false;
             dataGridView_Asignadas.Columns["Estado"].Visible = false;
+            dataGridView_Asignadas.Columns["FechaEnvio"].Visible = false;
+            dataGridView_Asignadas.Columns["FechaEntrega"].Visible = false;
+            dataGridView_Asignadas.Columns["Respuesta"].Visible = false;
+            dataGridView_Asignadas.Columns["Total"].Visible = false;
+        }
+        private void CargarSolictudesTec()
+        {
+            List<SolicitudEntidad> solicitudEntidadTecnico = new List<SolicitudEntidad>();
+            foreach (var item in SolicitudNegocio.ListaSolicitudesCompleta())
+            {
+                if (item.IdTecnico == usuarioSeleccionado.Id && item.Estado == 1)
+                    solicitudEntidadTecnico.Add(item);
+            }
+            dataGridView_SolicitudesTec.DataSource = solicitudEntidadTecnico;
+            dataGridView_SolicitudesTec.Columns["Id"].Visible = false;
+            dataGridView_SolicitudesTec.Columns["IdUsuario"].Visible = false;
+            dataGridView_SolicitudesTec.Columns["IdTecnico"].Visible = false;
+            dataGridView_SolicitudesTec.Columns["Estado"].Visible = false;
+            dataGridView_SolicitudesTec.Columns["FechaEnvio"].Visible = false;
+            dataGridView_SolicitudesTec.Columns["FechaEntrega"].Visible = false;
+            dataGridView_SolicitudesTec.Columns["Respuesta"].Visible = false;
+            dataGridView_SolicitudesTec.Columns["Total"].Visible = false;
+        }
+        private bool ComprobarExistencia(int c)
+        {
+            foreach (var item in solicitudEntidadsAsignadas)
+            {
+                if (item.Id == c)
+                {
+                    MessageBox.Show("Esa solicitud ya esta asigna a este usuario");
+                    return false;
+                }
+            }
+            return true;
+        }
+        private void QuitarLista(int quitar)
+        {
+            if (MessageBox.Show("Esta seguro que desea quitar esta solicitud?", "Quitar", MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                foreach (var item in solicitudEntidadsAsignadas)
+                {
+                    if (item.Id == quitar)
+                    {
+                        solicitudEntidadsAsignadas.Remove(item);
+                        break;
+                    }
+                }
+                CargarSolucitudes();
+            }
 
         }
+        private void CargarAsignaciones()
+        {
+            if (solicitudEntidadsAsignadas.Count >= 1)
+            {
+                foreach (var item in solicitudEntidadsAsignadas)
+                {
+                    item.IdTecnico = usuarioSeleccionado.Id;
+                    item.Respuesta = "";
+                    item.Total = 0;
+                    item.Estado = 1;
+                    if (SolicitudNegocio.Guardar(item) == null)
+                    {
+                        MessageBox.Show("Error al asignar la solicitud" + " " + item.Id);
+                    }
+                }
+                MessageBox.Show("Se han asignado todas las solicitudes");
+                CargarDataGrint();
+                CargarSolictudesTec();
+                solicitudEntidadsAsignadas.Clear();
+                dataGridView_Asignadas.DataSource = null;
+            }
+            else
+                MessageBox.Show("Aun no hay ninguna solicitud");
+        }
+        private void EliminarAsignacion(int quitar)
+        {
+            if (MessageBox.Show("Esta seguro que desea quitarle esta solicitud a este tecnico?", "Quitar", MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                SolicitudEntidad solicitudEntidadEliminar = SolicitudNegocio.BuscarSolicitud(quitar);
+                solicitudEntidadEliminar.Estado = 0;
+                solicitudEntidadEliminar = SolicitudNegocio.Guardar(solicitudEntidadEliminar);
 
-        private void dataGridView_Tecnicos_CellClick(object sender, DataGridViewCellEventArgs e)
+                if (solicitudEntidadEliminar != null)
+                {
+                    MessageBox.Show("Se ha quitado esa asigancion");
+                    CargarDataGrint();
+                    CargarSolictudesTec();
+                }
+                else
+                {
+                    MessageBox.Show("Error eliminar");
+                }
+                CargarSolucitudes();
+            }
+        }
+        private void dataGridView_Tecnicos_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -85,24 +181,7 @@ namespace Presentacion
                     " " + ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void CargarSolictudesTec()
-        {
-            List<SolicitudEntidad> solicitudEntidadTecnico = new List<SolicitudEntidad>();
-            foreach (var item in SolicitudNegocio.ListaSolicitudesCompleta())
-            {
-                if (item.IdTecnico == usuarioSeleccionado.Id && item.Estado == 1)
-                    solicitudEntidadTecnico.Add(item);
-            }
-            dataGridView_SolicitudesTec.DataSource = solicitudEntidadTecnico;
-            dataGridView_SolicitudesTec.Columns["Id"].Visible = false;
-            dataGridView_SolicitudesTec.Columns["IdUsuario"].Visible = false;
-            dataGridView_SolicitudesTec.Columns["IdTecnico"].Visible = false;
-            dataGridView_SolicitudesTec.Columns["NombreTecnico"].Visible = false;
-            dataGridView_SolicitudesTec.Columns["Estado"].Visible = false;
-        }
-
-        private void dataGridView_Solicitudes_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView_Solicitudes_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -126,21 +205,7 @@ namespace Presentacion
                     " " + ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private bool ComprobarExistencia(int c)
-        {
-            foreach (var item in solicitudEntidadsAsignadas)
-            {
-                if (item.Id == c)
-                {
-                    MessageBox.Show("Esa solicitud ya esta asigna a este usuario");
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        private void dataGridView_Asignadas_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView_Asignadas_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -153,56 +218,11 @@ namespace Presentacion
                     " " + ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void QuitarLista(int quitar)
-        {
-            if (MessageBox.Show("Esta seguro que desea quitar esta solicitud?", "Quitar", MessageBoxButtons.YesNo,
-               MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                foreach (var item in solicitudEntidadsAsignadas)
-                {
-                    if (item.Id == quitar)
-                    {
-                        solicitudEntidadsAsignadas.Remove(item);
-                        break;
-                    }
-                }
-                CargarSolucitudes();
-            }
-
-        }
-
-        private void rjButton1_Click(object sender, EventArgs e)
+        private void rjButton1_Click_1(object sender, EventArgs e)
         {
             CargarAsignaciones();
         }
-
-        private void CargarAsignaciones()
-        {
-            if (solicitudEntidadsAsignadas.Count >= 1)
-            {
-                foreach (var item in solicitudEntidadsAsignadas)
-                {
-                    item.IdTecnico = usuarioSeleccionado.Id;
-                    item.Respuesta = "";
-                    item.Total = 0;
-                    item.Estado = 1;
-                    if (SolicitudNegocio.Guardar(item) != null)
-                    {
-                        MessageBox.Show("Error al asignar la solicitud" + " " + item.Id);
-                    }
-                }
-                MessageBox.Show("Se han asignado todas las solicitudes");
-                CargarDataGrint();
-                CargarSolictudesTec();
-                solicitudEntidadsAsignadas.Clear();
-                dataGridView_Asignadas.DataSource = null;
-            }
-            else
-                MessageBox.Show("Aun no hay ninguna solicitud");
-        }
-
-        private void dataGridView_SolicitudesTec_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView_SolicitudesTec_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -213,29 +233,6 @@ namespace Presentacion
             {
                 MessageBox.Show("Error no ha seleccionado una fila valida" +
                     " " + ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void EliminarAsignacion(int quitar)
-        {
-            if (MessageBox.Show("Esta seguro que desea quitarle esta solicitud a este tecnico?", "Quitar", MessageBoxButtons.YesNo,
-                 MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                SolicitudEntidad solicitudEntidadEliminar = SolicitudNegocio.BuscarSolicitud(quitar);
-                solicitudEntidadEliminar.Estado = 0;
-                solicitudEntidadEliminar = SolicitudNegocio.Guardar(solicitudEntidadEliminar);
-
-                if (solicitudEntidadEliminar != null)
-                {
-                    MessageBox.Show("Se ha quitado esa asigancion");
-                    CargarDataGrint();
-                    CargarSolictudesTec();
-                }
-                else
-                {
-                    MessageBox.Show("Error eliminar");
-                }
-                CargarSolucitudes();
             }
         }
     }

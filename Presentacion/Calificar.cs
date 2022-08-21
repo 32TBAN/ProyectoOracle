@@ -94,15 +94,17 @@ namespace Presentacion
                     richTextBox_Requisitos.ReadOnly = false;
                     rjButton_EnviarRes.Visible = true;
 
-                    label_Coreo.Text = usuarioEnvio.Nickname;
-                    Fecha.Text = solicitudEntidad.FechaEntrega.ToString();
-                    richTextBox_Requisitos.Text = solicitudEntidad.Respuesta;
-                    Total.Text = "Total: " + solicitudEntidad.Total.ToString();
-
-                    if (richTextBox_Requisitos.Text == solicitudEntidad.Respuesta)
+                    if (solicitudEntidad.Respuesta != "")
                     {
                         richTextBox_Requisitos.ReadOnly = true;
                         rjButton_EnviarRes.Visible = false;
+                    }
+                    else
+                    {
+                        richTextBox_Requisitos.Text = solicitudEntidad.Respuesta;
+                        label_Coreo.Text = usuarioEnvio.Nickname;
+                        Fecha.Text = solicitudEntidad.FechaEntrega.ToString();
+                        Total.Text = "Total: " + solicitudEntidad.Total.ToString();
                     }
                 }
                 else
@@ -129,17 +131,6 @@ namespace Presentacion
                 panel_Calificasion.Visible = true;
             else
                 this.Close();
-        }
-
-        private void iconButton6_Click(object sender, EventArgs e)
-        {
-            panel_Calificasion.Visible = false;
-        }
-
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-            NotaServicio();
-            PdfServicio();
         }
 
         private void PdfServicio()
@@ -297,6 +288,7 @@ namespace Presentacion
                     solicitudEntidad.Area = rjComboBox_Area.Texts;
                     solicitudEntidad.FechaEntrega = DateTime.Now;
                     solicitudEntidad.Estado = 0;
+                    solicitudEntidad.IdTecnico = 1;
 
                     solicitudEntidad = SolicitudNegocio.Guardar(solicitudEntidad);
                     if (solicitudEntidad != null)
@@ -383,6 +375,81 @@ namespace Presentacion
                 MessageBox.Show("Aun no ha escrito su respuesta");
             }
 
+        }
+
+        private void iconButton9_Click(object sender, EventArgs e)
+        {
+            NotaServicio();
+            PdfServicio();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                checkBox2.Enabled = false;
+                checkBox3.Enabled = false;
+                checkBox4.Enabled = false;
+            }
+            else
+            {
+                checkBox2.Enabled = true;
+                checkBox3.Enabled = true;
+                checkBox4.Enabled = true;
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                checkBox1.Enabled = false;
+                checkBox3.Enabled = false;
+                checkBox4.Enabled = false;
+            }
+            else
+            {
+                checkBox1.Enabled = true;
+                checkBox3.Enabled = true;
+                checkBox4.Enabled = true;
+            }
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked)
+            {
+                checkBox1.Enabled = false;
+                checkBox2.Enabled = false;
+                checkBox4.Enabled = false;
+            }
+            else
+            {
+                checkBox1.Enabled = true;
+                checkBox2.Enabled = true;
+                checkBox4.Enabled = true;
+            }
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked)
+            {
+                checkBox1.Enabled = false;
+                checkBox2.Enabled = false;
+                checkBox3.Enabled = false;
+            }
+            else
+            {
+                checkBox1.Enabled = true;
+                checkBox2.Enabled = true;
+                checkBox3.Enabled = true;
+            }
+        }
+
+        private void iconButton6_Click(object sender, EventArgs e)
+        {
+            panel_Calificasion.Visible = false;
         }
     }
 }

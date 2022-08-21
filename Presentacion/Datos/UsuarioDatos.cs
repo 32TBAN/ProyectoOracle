@@ -39,7 +39,6 @@ namespace Presentacion.Datos
             }
 
         }
-
         public static UsuarioEntidad BuscarUsuarioNickname(string texts)
         {
             try
@@ -144,9 +143,6 @@ namespace Presentacion.Datos
                 return null;
             }
         }
-
-      
-
         public static UsuarioEntidad BuscarUsuarioID(int idTecnico)
         {
             try

@@ -86,6 +86,7 @@
             this.dataGridView_SolicitudesTec.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView_SolicitudesTec.Size = new System.Drawing.Size(324, 162);
             this.dataGridView_SolicitudesTec.TabIndex = 23;
+            this.dataGridView_SolicitudesTec.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_SolicitudesTec_CellClick_1);
             // 
             // label_Tecnico
             // 
@@ -122,6 +123,7 @@
             this.dataGridView_Asignadas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView_Asignadas.Size = new System.Drawing.Size(302, 162);
             this.dataGridView_Asignadas.TabIndex = 21;
+            this.dataGridView_Asignadas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Asignadas_CellClick_1);
             // 
             // label2
             // 
@@ -158,6 +160,7 @@
             this.dataGridView_Tecnicos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView_Tecnicos.Size = new System.Drawing.Size(324, 175);
             this.dataGridView_Tecnicos.TabIndex = 19;
+            this.dataGridView_Tecnicos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Tecnicos_CellClick_1);
             // 
             // textBox_Cedula
             // 
@@ -186,6 +189,7 @@
             this.rjButton1.Text = "Aceptar";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click_1);
             // 
             // label3
             // 
@@ -224,6 +228,7 @@
             this.dataGridView_Solicitudes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView_Solicitudes.Size = new System.Drawing.Size(438, 175);
             this.dataGridView_Solicitudes.TabIndex = 15;
+            this.dataGridView_Solicitudes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Solicitudes_CellClick_1);
             // 
             // label1
             // 

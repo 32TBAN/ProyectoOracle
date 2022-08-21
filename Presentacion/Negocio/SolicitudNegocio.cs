@@ -27,9 +27,9 @@ namespace Presentacion.Negocio
             return SolicitudDatos.ListaSolicitudesCompleta();
         }
 
-        internal static bool EliminarSolicitud(int id)
+        public static bool EliminarSolicitud(int id)
         {
-            throw new NotImplementedException();
+            return SolicitudDatos.EliminarSolicitud(id);
         }
     }
 }

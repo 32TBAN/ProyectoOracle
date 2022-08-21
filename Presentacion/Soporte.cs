@@ -25,6 +25,8 @@ namespace Presentacion
             this.usuarioEntidad = usuarioEntidad;
             CargarDatos();
             CargarPermisos();
+            solicitudes1.Enabled = false;
+            solicitudes1.ForeColor = Color.White;
         }
         private void CargarPermisos()
         {

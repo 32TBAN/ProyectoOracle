@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Presentacion.Datos;
 
 namespace Presentacion.Negocio
 {
@@ -11,12 +12,12 @@ namespace Presentacion.Negocio
     {
         internal static CalificacionEntidad Calificar(CalificacionEntidad calificacionEntidad)
         {
-            throw new NotImplementedException();
+            return CalificacionDatos.Calificar(calificacionEntidad);
         }
 
-        internal static CalificacionEntidad SolicitudCal(int id)
+        public static CalificacionEntidad SolicitudCal(int id)
         {
-            throw new NotImplementedException();
+            return CalificacionDatos.SolicitudCal(id);
         }
     }
 }

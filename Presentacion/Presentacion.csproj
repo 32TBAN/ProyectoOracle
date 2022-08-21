@@ -84,6 +84,7 @@
     <Compile Include="Calificar.Designer.cs">
       <DependentUpon>Calificar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Datos\CalificacionDatos.cs" />
     <Compile Include="Datos\Conexion.cs" />
     <Compile Include="Datos\SolicitudDatos.cs" />
     <Compile Include="Datos\UsuarioDatos.cs" />

@@ -45,15 +45,18 @@ namespace Presentacion
                 iconButton_Agregar.Visible = false;
                 iconButton_ASIGNAR.Visible = false;
                 iconButton_revisar.Visible = false;
-                iconButton11.Visible = false;
-                iconButton9.Visible = false;
-                iconButton7.Visible = false;
+                iconButton_AgregarPer.Visible = false;
+                iconButton_Asig.Visible = false;
+                iconButton_Asignacion.Visible = false;
             }
             else if (usuarioEntidad.NumPerfil == 2)
             {
                 iconButton_Agregar.Visible = false;
                 iconButton_ASIGNAR.Visible = false;
                 iconButton_revisar.Visible = false;
+                iconButton_AgregarPer.Visible = false;
+                iconButton_Asig.Visible = false;
+                iconButton_Asignacion.Visible = false;
             }
         }
         private void iconButton2_Click(object sender, EventArgs e)
@@ -273,6 +276,8 @@ namespace Presentacion
         private void iconButton_revisar_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
+            AbrirFormularios(new Revicion());
+
         }
 
         private void iconButton8_Click(object sender, EventArgs e)
@@ -353,20 +358,20 @@ namespace Presentacion
 
         private void iconButton10_Click(object sender, EventArgs e)
         {
-            ActivateButton(iconButton6, RGBColors.color2);
-            AbrirFormularios(new AgregarPerfil());
+            ActivateButton(iconButton_sOPORTE, RGBColors.color2);
+            AbrirFormularios(new Soporte(usuarioEntidad));
         }
 
         private void iconButton9_Click(object sender, EventArgs e)
         {
             ActivateButton(iconButton_ASIGNAR, RGBColors.color3);
-            AbrirFormularios(new AgregarPerfil());
+            AbrirFormularios(new Asignacion());
         }
 
         private void iconButton7_Click(object sender, EventArgs e)
         {
             ActivateButton(iconButton_revisar, RGBColors.color4);
-            AbrirFormularios(new AgregarPerfil());
+            AbrirFormularios(new Revicion());
         }
 
         private void iconButton1_Click(object sender, EventArgs e)

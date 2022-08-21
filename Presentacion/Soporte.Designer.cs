@@ -54,6 +54,7 @@
             this.iconButton_Pincipal = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton_NUebasol = new FontAwesome.Sharp.IconButton();
+            this.solicitudes1 = new Presentacion.Solicitudes();
             this.panel_Contendor.SuspendLayout();
             this.panel_NuevaSolicitud.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -69,7 +70,7 @@
             this.panel_Contendor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Contendor.Location = new System.Drawing.Point(0, 131);
             this.panel_Contendor.Name = "panel_Contendor";
-            this.panel_Contendor.Size = new System.Drawing.Size(670, 361);
+            this.panel_Contendor.Size = new System.Drawing.Size(825, 361);
             this.panel_Contendor.TabIndex = 7;
             // 
             // label_Solicitud
@@ -104,7 +105,7 @@
             this.panel_NuevaSolicitud.Controls.Add(this.textBox_Asunto);
             this.panel_NuevaSolicitud.Controls.Add(this.panel7);
             this.panel_NuevaSolicitud.ForeColor = System.Drawing.Color.Black;
-            this.panel_NuevaSolicitud.Location = new System.Drawing.Point(251, 4);
+            this.panel_NuevaSolicitud.Location = new System.Drawing.Point(406, 4);
             this.panel_NuevaSolicitud.Name = "panel_NuevaSolicitud";
             this.panel_NuevaSolicitud.Size = new System.Drawing.Size(407, 354);
             this.panel_NuevaSolicitud.TabIndex = 1;
@@ -353,6 +354,7 @@
             // panel_Cabezera
             // 
             this.panel_Cabezera.BackColor = System.Drawing.Color.Black;
+            this.panel_Cabezera.Controls.Add(this.solicitudes1);
             this.panel_Cabezera.Controls.Add(this.iconButton_SolicituAsig);
             this.panel_Cabezera.Controls.Add(this.iconButton1);
             this.panel_Cabezera.Controls.Add(this.iconButton_Pincipal);
@@ -360,7 +362,7 @@
             this.panel_Cabezera.ForeColor = System.Drawing.Color.Black;
             this.panel_Cabezera.Location = new System.Drawing.Point(0, 44);
             this.panel_Cabezera.Name = "panel_Cabezera";
-            this.panel_Cabezera.Size = new System.Drawing.Size(670, 87);
+            this.panel_Cabezera.Size = new System.Drawing.Size(825, 87);
             this.panel_Cabezera.TabIndex = 6;
             // 
             // iconButton_SolicituAsig
@@ -442,7 +444,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(670, 44);
+            this.panel1.Size = new System.Drawing.Size(825, 44);
             this.panel1.TabIndex = 5;
             // 
             // iconButton_NUebasol
@@ -470,12 +472,27 @@
             this.iconButton_NUebasol.UseVisualStyleBackColor = true;
             this.iconButton_NUebasol.Click += new System.EventHandler(this.iconButton_NUebasol_Click);
             // 
+            // solicitudes1
+            // 
+            this.solicitudes1.Asunto = "Asunto";
+            this.solicitudes1.BackColor = System.Drawing.Color.White;
+            this.solicitudes1.Descripcion = "Descripcion";
+            this.solicitudes1.Emisor = "Emisor";
+            this.solicitudes1.Fecha = "Fecha";
+            this.solicitudes1.ForeColor = System.Drawing.Color.Black;
+            this.solicitudes1.Location = new System.Drawing.Point(0, 44);
+            this.solicitudes1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.solicitudes1.Name = "solicitudes1";
+            this.solicitudes1.Seleccionar = false;
+            this.solicitudes1.Size = new System.Drawing.Size(823, 41);
+            this.solicitudes1.TabIndex = 20;
+            // 
             // Soporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(670, 492);
+            this.ClientSize = new System.Drawing.Size(825, 492);
             this.Controls.Add(this.panel_Contendor);
             this.Controls.Add(this.panel_Cabezera);
             this.Controls.Add(this.panel1);
@@ -524,5 +541,6 @@
         private FontAwesome.Sharp.IconButton iconButton_Pincipal;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton iconButton_NUebasol;
+        private Solicitudes solicitudes1;
     }
 }

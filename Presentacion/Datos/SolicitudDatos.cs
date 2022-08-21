@@ -113,7 +113,7 @@ namespace Presentacion.Datos
                                 if (dr["FEC_FIN_SOL"].ToString() == "")
                                     solicitud.FechaEntrega = DateTime.Now;
                                 else
-                                    solicitud.FechaEntrega = (DateTime)(dr["FECHA"]);
+                                    solicitud.FechaEntrega = (DateTime)(dr["FEC_FIN_SOL"]);
 
                                 solicitud.Respuesta = dr["RES_TEC"].ToString();
 
@@ -170,7 +170,6 @@ namespace Presentacion.Datos
                 throw;
             }
         }
-
         public static SolicitudEntidad Guardar(SolicitudEntidad solicitudEntidad)
         {
             try
@@ -197,10 +196,32 @@ namespace Presentacion.Datos
             }
             catch (Exception)
             {
+                return null;
+            }
+        }
+        public static bool EliminarSolicitud(int id)
+        {
+            try
+            {
+                int filasAfectadas = 0;
+                using (OracleConnection connection = Conexion.ObtenerConexion())
+                {
+                    connection.Open();
+                    using (OracleCommand cmd = new OracleCommand("EliminarSolicitud", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("idS", OracleType.Number).Value = id;
+
+                        filasAfectadas = Convert.ToInt32(cmd.ExecuteNonQuery());
+                    }
+                }
+                return filasAfectadas > 0;
+            }
+            catch (Exception)
+            {
+
                 throw;
             }
         }
-
-       
     }
 }

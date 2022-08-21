@@ -172,6 +172,7 @@
             // 
             this.richTextBox_Descripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.richTextBox_Descripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_Descripcion.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox_Descripcion.Location = new System.Drawing.Point(96, 76);
             this.richTextBox_Descripcion.Name = "richTextBox_Descripcion";
             this.richTextBox_Descripcion.Size = new System.Drawing.Size(299, 102);
@@ -547,7 +548,7 @@
             this.label_Fecha_Envio.BackColor = System.Drawing.Color.Transparent;
             this.label_Fecha_Envio.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Fecha_Envio.ForeColor = System.Drawing.Color.White;
-            this.label_Fecha_Envio.Location = new System.Drawing.Point(975, 50);
+            this.label_Fecha_Envio.Location = new System.Drawing.Point(486, 50);
             this.label_Fecha_Envio.Name = "label_Fecha_Envio";
             this.label_Fecha_Envio.Size = new System.Drawing.Size(63, 13);
             this.label_Fecha_Envio.TabIndex = 34;
@@ -611,11 +612,12 @@
             this.iconButton9.IconColor = System.Drawing.Color.White;
             this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton9.IconSize = 20;
-            this.iconButton9.Location = new System.Drawing.Point(1072, 0);
+            this.iconButton9.Location = new System.Drawing.Point(583, 0);
             this.iconButton9.Name = "iconButton9";
             this.iconButton9.Size = new System.Drawing.Size(33, 27);
             this.iconButton9.TabIndex = 31;
             this.iconButton9.UseVisualStyleBackColor = true;
+            this.iconButton9.Click += new System.EventHandler(this.iconButton9_Click);
             // 
             // rjCircularPictureBox_perfil
             // 
@@ -698,7 +700,8 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(40, 12);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(141, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(480, 25);
             this.label3.TabIndex = 0;
@@ -709,7 +712,8 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(235, 50);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(336, 128);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 23);
             this.label4.TabIndex = 1;
@@ -724,11 +728,12 @@
             this.iconButton6.IconColor = System.Drawing.Color.Black;
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton6.IconSize = 20;
-            this.iconButton6.Location = new System.Drawing.Point(526, 10);
+            this.iconButton6.Location = new System.Drawing.Point(728, 10);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Size = new System.Drawing.Size(22, 23);
             this.iconButton6.TabIndex = 2;
             this.iconButton6.UseVisualStyleBackColor = true;
+            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
             // 
             // Enviar
             // 
@@ -742,7 +747,7 @@
             this.Enviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Enviar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Enviar.ForeColor = System.Drawing.Color.White;
-            this.Enviar.Location = new System.Drawing.Point(187, 256);
+            this.Enviar.Location = new System.Drawing.Point(288, 334);
             this.Enviar.Name = "Enviar";
             this.Enviar.Size = new System.Drawing.Size(169, 49);
             this.Enviar.TabIndex = 11;
@@ -753,47 +758,59 @@
             // 
             // checkBox1
             // 
+            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(216, 96);
+            this.checkBox1.ForeColor = System.Drawing.Color.Black;
+            this.checkBox1.Location = new System.Drawing.Point(284, 176);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(177, 27);
             this.checkBox1.TabIndex = 12;
             this.checkBox1.Text = "Muy satisfactorio";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox2
             // 
+            this.checkBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(216, 129);
+            this.checkBox2.ForeColor = System.Drawing.Color.Black;
+            this.checkBox2.Location = new System.Drawing.Point(284, 209);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(137, 27);
             this.checkBox2.TabIndex = 13;
             this.checkBox2.Text = "Satisfactorio";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox3
             // 
+            this.checkBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(216, 162);
+            this.checkBox3.ForeColor = System.Drawing.Color.Black;
+            this.checkBox3.Location = new System.Drawing.Point(284, 242);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(185, 27);
             this.checkBox3.TabIndex = 14;
             this.checkBox3.Text = "Poco satisfactorio";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // checkBox4
             // 
+            this.checkBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox4.AutoSize = true;
             this.checkBox4.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.Location = new System.Drawing.Point(216, 195);
+            this.checkBox4.ForeColor = System.Drawing.Color.Black;
+            this.checkBox4.Location = new System.Drawing.Point(284, 275);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(186, 27);
             this.checkBox4.TabIndex = 15;
             this.checkBox4.Text = "Nada satisfactorio";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // panel_Calificasion
             // 
@@ -806,9 +823,10 @@
             this.panel_Calificasion.Controls.Add(this.iconButton6);
             this.panel_Calificasion.Controls.Add(this.label4);
             this.panel_Calificasion.Controls.Add(this.label3);
-            this.panel_Calificasion.Location = new System.Drawing.Point(714, 144);
+            this.panel_Calificasion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Calificasion.Location = new System.Drawing.Point(0, 0);
             this.panel_Calificasion.Name = "panel_Calificasion";
-            this.panel_Calificasion.Size = new System.Drawing.Size(551, 382);
+            this.panel_Calificasion.Size = new System.Drawing.Size(753, 538);
             this.panel_Calificasion.TabIndex = 36;
             this.panel_Calificasion.Visible = false;
             // 
@@ -817,7 +835,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1242, 538);
+            this.ClientSize = new System.Drawing.Size(753, 538);
             this.Controls.Add(this.panel_Calificasion);
             this.Controls.Add(this.rjButton_EnviarRes);
             this.Controls.Add(this.richTextBox_Requisitos);

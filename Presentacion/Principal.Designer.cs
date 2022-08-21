@@ -37,10 +37,10 @@
             this.iconButton12 = new FontAwesome.Sharp.IconButton();
             this.label_Nombre = new System.Windows.Forms.Label();
             this.label_Permisos = new System.Windows.Forms.Label();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.iconButton9 = new FontAwesome.Sharp.IconButton();
-            this.iconButton10 = new FontAwesome.Sharp.IconButton();
-            this.iconButton11 = new FontAwesome.Sharp.IconButton();
+            this.iconButton_Asignacion = new FontAwesome.Sharp.IconButton();
+            this.iconButton_Asig = new FontAwesome.Sharp.IconButton();
+            this.iconButton_tec = new FontAwesome.Sharp.IconButton();
+            this.iconButton_AgregarPer = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             this.iconButton_revisar = new FontAwesome.Sharp.IconButton();
             this.iconButton_ASIGNAR = new FontAwesome.Sharp.IconButton();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.iconButton_sOPORTE = new FontAwesome.Sharp.IconButton();
             this.iconButton_Agregar = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -69,10 +69,10 @@
             // 
             this.panel_C.BackColor = System.Drawing.Color.Black;
             this.panel_C.Controls.Add(this.panel_Perfil);
-            this.panel_C.Controls.Add(this.iconButton7);
-            this.panel_C.Controls.Add(this.iconButton9);
-            this.panel_C.Controls.Add(this.iconButton10);
-            this.panel_C.Controls.Add(this.iconButton11);
+            this.panel_C.Controls.Add(this.iconButton_Asignacion);
+            this.panel_C.Controls.Add(this.iconButton_Asig);
+            this.panel_C.Controls.Add(this.iconButton_tec);
+            this.panel_C.Controls.Add(this.iconButton_AgregarPer);
             this.panel_C.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_C.Location = new System.Drawing.Point(196, 70);
             this.panel_C.Margin = new System.Windows.Forms.Padding(2);
@@ -204,105 +204,105 @@
             this.label_Permisos.TabIndex = 8;
             this.label_Permisos.Text = "Permisos";
             // 
-            // iconButton7
+            // iconButton_Asignacion
             // 
-            this.iconButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton7.FlatAppearance.BorderSize = 0;
-            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton7.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton7.ForeColor = System.Drawing.Color.White;
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.Clipboard;
-            this.iconButton7.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.IconSize = 30;
-            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.Location = new System.Drawing.Point(463, 272);
-            this.iconButton7.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton7.Size = new System.Drawing.Size(222, 105);
-            this.iconButton7.TabIndex = 24;
-            this.iconButton7.Tag = "Revisión Asignaciones";
-            this.iconButton7.Text = "   Revisión Asignaciones";
-            this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton7.UseVisualStyleBackColor = false;
-            this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
+            this.iconButton_Asignacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconButton_Asignacion.FlatAppearance.BorderSize = 0;
+            this.iconButton_Asignacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton_Asignacion.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton_Asignacion.ForeColor = System.Drawing.Color.White;
+            this.iconButton_Asignacion.IconChar = FontAwesome.Sharp.IconChar.Clipboard;
+            this.iconButton_Asignacion.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.iconButton_Asignacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton_Asignacion.IconSize = 30;
+            this.iconButton_Asignacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton_Asignacion.Location = new System.Drawing.Point(287, 169);
+            this.iconButton_Asignacion.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton_Asignacion.Name = "iconButton_Asignacion";
+            this.iconButton_Asignacion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton_Asignacion.Size = new System.Drawing.Size(222, 105);
+            this.iconButton_Asignacion.TabIndex = 24;
+            this.iconButton_Asignacion.Tag = "Revisión Asignaciones";
+            this.iconButton_Asignacion.Text = "   Revisión Asignaciones";
+            this.iconButton_Asignacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton_Asignacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton_Asignacion.UseVisualStyleBackColor = false;
+            this.iconButton_Asignacion.Click += new System.EventHandler(this.iconButton7_Click);
             // 
-            // iconButton9
+            // iconButton_Asig
             // 
-            this.iconButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton9.FlatAppearance.BorderSize = 0;
-            this.iconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton9.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton9.ForeColor = System.Drawing.Color.White;
-            this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.Envelope;
-            this.iconButton9.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton9.IconSize = 30;
-            this.iconButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton9.Location = new System.Drawing.Point(129, 272);
-            this.iconButton9.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton9.Name = "iconButton9";
-            this.iconButton9.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton9.Size = new System.Drawing.Size(222, 105);
-            this.iconButton9.TabIndex = 23;
-            this.iconButton9.Tag = "Asignar Solicitud";
-            this.iconButton9.Text = "   Asignar Solicitud";
-            this.iconButton9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton9.UseVisualStyleBackColor = false;
-            this.iconButton9.Click += new System.EventHandler(this.iconButton9_Click);
+            this.iconButton_Asig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconButton_Asig.FlatAppearance.BorderSize = 0;
+            this.iconButton_Asig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton_Asig.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton_Asig.ForeColor = System.Drawing.Color.White;
+            this.iconButton_Asig.IconChar = FontAwesome.Sharp.IconChar.Envelope;
+            this.iconButton_Asig.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.iconButton_Asig.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton_Asig.IconSize = 30;
+            this.iconButton_Asig.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton_Asig.Location = new System.Drawing.Point(287, 16);
+            this.iconButton_Asig.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton_Asig.Name = "iconButton_Asig";
+            this.iconButton_Asig.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton_Asig.Size = new System.Drawing.Size(222, 105);
+            this.iconButton_Asig.TabIndex = 23;
+            this.iconButton_Asig.Tag = "Asignar Solicitud";
+            this.iconButton_Asig.Text = "   Asignar Solicitud";
+            this.iconButton_Asig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton_Asig.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton_Asig.UseVisualStyleBackColor = false;
+            this.iconButton_Asig.Click += new System.EventHandler(this.iconButton9_Click);
             // 
-            // iconButton10
+            // iconButton_tec
             // 
-            this.iconButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton10.FlatAppearance.BorderSize = 0;
-            this.iconButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton10.ForeColor = System.Drawing.Color.White;
-            this.iconButton10.IconChar = FontAwesome.Sharp.IconChar.Laptop;
-            this.iconButton10.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton10.IconSize = 30;
-            this.iconButton10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton10.Location = new System.Drawing.Point(463, 96);
-            this.iconButton10.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton10.Name = "iconButton10";
-            this.iconButton10.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton10.Size = new System.Drawing.Size(222, 105);
-            this.iconButton10.TabIndex = 22;
-            this.iconButton10.Tag = "Soporte Técnico";
-            this.iconButton10.Text = "   Soporte Técnico";
-            this.iconButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton10.UseVisualStyleBackColor = false;
-            this.iconButton10.Click += new System.EventHandler(this.iconButton10_Click);
+            this.iconButton_tec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconButton_tec.FlatAppearance.BorderSize = 0;
+            this.iconButton_tec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton_tec.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton_tec.ForeColor = System.Drawing.Color.White;
+            this.iconButton_tec.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.iconButton_tec.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.iconButton_tec.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton_tec.IconSize = 30;
+            this.iconButton_tec.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton_tec.Location = new System.Drawing.Point(30, 16);
+            this.iconButton_tec.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton_tec.Name = "iconButton_tec";
+            this.iconButton_tec.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton_tec.Size = new System.Drawing.Size(222, 105);
+            this.iconButton_tec.TabIndex = 22;
+            this.iconButton_tec.Tag = "Soporte Técnico";
+            this.iconButton_tec.Text = "   Soporte Técnico";
+            this.iconButton_tec.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton_tec.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton_tec.UseVisualStyleBackColor = false;
+            this.iconButton_tec.Click += new System.EventHandler(this.iconButton10_Click);
             // 
-            // iconButton11
+            // iconButton_AgregarPer
             // 
-            this.iconButton11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton11.FlatAppearance.BorderSize = 0;
-            this.iconButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton11.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton11.ForeColor = System.Drawing.Color.White;
-            this.iconButton11.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconButton11.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.iconButton11.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton11.IconSize = 30;
-            this.iconButton11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton11.Location = new System.Drawing.Point(129, 96);
-            this.iconButton11.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton11.Name = "iconButton11";
-            this.iconButton11.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton11.Size = new System.Drawing.Size(222, 105);
-            this.iconButton11.TabIndex = 21;
-            this.iconButton11.Tag = "Agregar Perfil";
-            this.iconButton11.Text = "   Agregar Perfil";
-            this.iconButton11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton11.UseVisualStyleBackColor = false;
-            this.iconButton11.Click += new System.EventHandler(this.iconButton11_Click);
+            this.iconButton_AgregarPer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconButton_AgregarPer.FlatAppearance.BorderSize = 0;
+            this.iconButton_AgregarPer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton_AgregarPer.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton_AgregarPer.ForeColor = System.Drawing.Color.White;
+            this.iconButton_AgregarPer.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconButton_AgregarPer.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.iconButton_AgregarPer.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton_AgregarPer.IconSize = 30;
+            this.iconButton_AgregarPer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton_AgregarPer.Location = new System.Drawing.Point(30, 169);
+            this.iconButton_AgregarPer.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton_AgregarPer.Name = "iconButton_AgregarPer";
+            this.iconButton_AgregarPer.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton_AgregarPer.Size = new System.Drawing.Size(222, 105);
+            this.iconButton_AgregarPer.TabIndex = 21;
+            this.iconButton_AgregarPer.Tag = "Agregar Perfil";
+            this.iconButton_AgregarPer.Text = "   Agregar Perfil";
+            this.iconButton_AgregarPer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton_AgregarPer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton_AgregarPer.UseVisualStyleBackColor = false;
+            this.iconButton_AgregarPer.Click += new System.EventHandler(this.iconButton11_Click);
             // 
             // panel3
             // 
@@ -448,7 +448,7 @@
             this.panel_Menu.Controls.Add(this.iconButton_revisar);
             this.panel_Menu.Controls.Add(this.iconButton_ASIGNAR);
             this.panel_Menu.Controls.Add(this.iconButton8);
-            this.panel_Menu.Controls.Add(this.iconButton6);
+            this.panel_Menu.Controls.Add(this.iconButton_sOPORTE);
             this.panel_Menu.Controls.Add(this.iconButton_Agregar);
             this.panel_Menu.Controls.Add(this.panel4);
             this.panel_Menu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -533,30 +533,30 @@
             this.iconButton8.UseVisualStyleBackColor = true;
             this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
             // 
-            // iconButton6
+            // iconButton_sOPORTE
             // 
-            this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton6.FlatAppearance.BorderSize = 0;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton6.ForeColor = System.Drawing.Color.Black;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.Laptop;
-            this.iconButton6.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 30;
-            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.Location = new System.Drawing.Point(0, 155);
-            this.iconButton6.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton6.Size = new System.Drawing.Size(196, 42);
-            this.iconButton6.TabIndex = 16;
-            this.iconButton6.Tag = "Soporte Técnico";
-            this.iconButton6.Text = "   Soporte Técnico";
-            this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton6.UseVisualStyleBackColor = true;
-            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
+            this.iconButton_sOPORTE.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton_sOPORTE.FlatAppearance.BorderSize = 0;
+            this.iconButton_sOPORTE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton_sOPORTE.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton_sOPORTE.ForeColor = System.Drawing.Color.Black;
+            this.iconButton_sOPORTE.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.iconButton_sOPORTE.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.iconButton_sOPORTE.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton_sOPORTE.IconSize = 30;
+            this.iconButton_sOPORTE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton_sOPORTE.Location = new System.Drawing.Point(0, 155);
+            this.iconButton_sOPORTE.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton_sOPORTE.Name = "iconButton_sOPORTE";
+            this.iconButton_sOPORTE.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton_sOPORTE.Size = new System.Drawing.Size(196, 42);
+            this.iconButton_sOPORTE.TabIndex = 16;
+            this.iconButton_sOPORTE.Tag = "Soporte Técnico";
+            this.iconButton_sOPORTE.Text = "   Soporte Técnico";
+            this.iconButton_sOPORTE.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton_sOPORTE.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton_sOPORTE.UseVisualStyleBackColor = true;
+            this.iconButton_sOPORTE.Click += new System.EventHandler(this.iconButton6_Click);
             // 
             // iconButton_Agregar
             // 
@@ -642,17 +642,17 @@
         private FontAwesome.Sharp.IconButton iconButton_revisar;
         private FontAwesome.Sharp.IconButton iconButton_ASIGNAR;
         private FontAwesome.Sharp.IconButton iconButton8;
-        private FontAwesome.Sharp.IconButton iconButton6;
+        private FontAwesome.Sharp.IconButton iconButton_sOPORTE;
         private FontAwesome.Sharp.IconButton iconButton_Agregar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton7;
-        private FontAwesome.Sharp.IconButton iconButton9;
-        private FontAwesome.Sharp.IconButton iconButton10;
-        private FontAwesome.Sharp.IconButton iconButton11;
+        private FontAwesome.Sharp.IconButton iconButton_Asignacion;
+        private FontAwesome.Sharp.IconButton iconButton_Asig;
+        private FontAwesome.Sharp.IconButton iconButton_tec;
+        private FontAwesome.Sharp.IconButton iconButton_AgregarPer;
         private System.Windows.Forms.Panel panel_Perfil;
         private RJCodeAdvance.RJControls.RJButton rjButton_Guardar;
         private System.Windows.Forms.TextBox textBox_Contrasenia;
