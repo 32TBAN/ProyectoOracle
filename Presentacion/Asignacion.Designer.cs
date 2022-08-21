@@ -84,7 +84,7 @@
             this.dataGridView_SolicitudesTec.Location = new System.Drawing.Point(2, 255);
             this.dataGridView_SolicitudesTec.Name = "dataGridView_SolicitudesTec";
             this.dataGridView_SolicitudesTec.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView_SolicitudesTec.Size = new System.Drawing.Size(324, 181);
+            this.dataGridView_SolicitudesTec.Size = new System.Drawing.Size(324, 162);
             this.dataGridView_SolicitudesTec.TabIndex = 23;
             // 
             // label_Tecnico
@@ -120,7 +120,7 @@
             this.dataGridView_Asignadas.Location = new System.Drawing.Point(344, 255);
             this.dataGridView_Asignadas.Name = "dataGridView_Asignadas";
             this.dataGridView_Asignadas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView_Asignadas.Size = new System.Drawing.Size(302, 175);
+            this.dataGridView_Asignadas.Size = new System.Drawing.Size(302, 162);
             this.dataGridView_Asignadas.TabIndex = 21;
             // 
             // label2
@@ -153,7 +153,7 @@
             this.dataGridView_Tecnicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView_Tecnicos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView_Tecnicos.EnableHeadersVisualStyles = false;
-            this.dataGridView_Tecnicos.Location = new System.Drawing.Point(-3, 43);
+            this.dataGridView_Tecnicos.Location = new System.Drawing.Point(2, 43);
             this.dataGridView_Tecnicos.Name = "dataGridView_Tecnicos";
             this.dataGridView_Tecnicos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView_Tecnicos.Size = new System.Drawing.Size(324, 175);
@@ -179,7 +179,7 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(664, 401);
+            this.rjButton1.Location = new System.Drawing.Point(652, 382);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(139, 35);
             this.rjButton1.TabIndex = 17;
@@ -241,7 +241,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(796, 429);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView_SolicitudesTec);
             this.Controls.Add(this.label_Tecnico);

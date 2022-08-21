@@ -15,11 +15,11 @@ namespace Presentacion
 {
     public partial class Soporte : Form
     {
+        public UsuarioEntidad usuarioEntidad { get; set; }
         SolicitudEntidad solicitudEntidad = new SolicitudEntidad();
         private IconButton bottonActivo;
         private Panel bordeInferior;
-        public UsuarioEntidad usuarioEntidad { get; set; }
-        public Soporte()
+        public Soporte(UsuarioEntidad usuarioEntidad)
         {
             InitializeComponent();
             this.usuarioEntidad = usuarioEntidad;
@@ -62,7 +62,7 @@ namespace Presentacion
                 if (general == 0)
                 {
                     List<SolicitudEntidad> solicitudesPendiente = null;
-                    if (usuarioEntidad.Perfil == "Usuario")
+                    if (usuarioEntidad.NumPerfil == 1)
                         solicitudesPendiente = solicitudEntidads.Where(x => x.Estado == 0 || x.Estado == 1).ToList();
                     else
                         solicitudesPendiente = solicitudEntidads.Where(x => x.Estado == 1).ToList();
@@ -210,8 +210,8 @@ namespace Presentacion
         {
             if (bottonActivo != null)
             {
-                bottonActivo.BackColor = Color.White;
-                bottonActivo.ForeColor = Color.Black;
+                bottonActivo.BackColor = Color.Black;
+                bottonActivo.ForeColor = Color.White;
                 bottonActivo.IconColor = Color.FromArgb(242, 207, 141);
             }
         }

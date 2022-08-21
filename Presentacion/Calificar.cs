@@ -131,36 +131,6 @@ namespace Presentacion
                 this.Close();
         }
 
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            if (!panel_Min.Visible)
-            {
-                panel_Min.Visible = true;
-                if (usuarioEntidadTecnico.Id != 0 && solicitudEntidad.Estado != 0)
-                {
-                    label_Encargado.Text = usuarioEntidadTecnico.Nombre + " " + usuarioEntidadTecnico.Apellido;
-                    if (usuarioEntidadNormal != null)
-                    {
-                        label_Para.Text = usuarioEntidadNormal.Nombre + " " + usuarioEntidadNormal.Apellido;
-                    }
-                    label_AsuntoMin.Text = solicitudEntidad.Asunto;
-                }
-                else
-                {
-                    label_Encargado.Visible = false;
-                    label_Para.Visible = false;
-                    Fecha.Visible = false;
-                    label_AsuntoMin.Visible = false;
-                    label_ENCARGO.Visible = true;
-                }
-            }
-            else
-            {
-                panel_Min.Visible = false;
-            }
-
-        }
-
         private void iconButton6_Click(object sender, EventArgs e)
         {
             panel_Calificasion.Visible = false;
@@ -228,10 +198,6 @@ namespace Presentacion
 
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            panel_NuevaSolicitud.Visible = true;
-        }
         private bool ControlDatos()
         {
             if (textBox_Asunto.Text == "" || richTextBox_Descripcion.Text == "" ||
@@ -254,7 +220,39 @@ namespace Presentacion
             textBox_Asunto.Text = "";
             richTextBox_Descripcion.Text = "";
         }
-        private void iconButton4_Click(object sender, EventArgs e)
+        private void iconButton3_Click_1(object sender, EventArgs e)
+        {
+            if (!panel_Min.Visible)
+            {
+                panel_Min.Visible = true;
+                if (usuarioEntidadTecnico.Id != 0 && solicitudEntidad.Estado != 0)
+                {
+                    label_Encargado.Text = usuarioEntidadTecnico.Nombre + " " + usuarioEntidadTecnico.Apellido;
+                    if (usuarioEntidadNormal != null)
+                    {
+                        label_Para.Text = usuarioEntidadNormal.Nombre + " " + usuarioEntidadNormal.Apellido;
+                    }
+                    label_AsuntoMin.Text = solicitudEntidad.Asunto;
+                }
+                else
+                {
+                    label_Encargado.Visible = false;
+                    label_Para.Visible = false;
+                    Fecha.Visible = false;
+                    label_AsuntoMin.Visible = false;
+                    label_ENCARGO.Visible = true;
+                }
+            }
+            else
+                panel_Min.Visible = false;
+        }
+
+        private void iconButton_Editar_Click(object sender, EventArgs e)
+        {
+            panel_NuevaSolicitud.Visible = true;
+        }
+
+        private void iconButton_Eliminar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -274,20 +272,19 @@ namespace Presentacion
             {
                 MessageBox.Show("No se puede eliminar esta solictud por que ya esta en proceso");
             }
-
         }
 
-        private void iconButton7_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-        }
-
-        private void iconButton8_Click(object sender, EventArgs e)
+        private void iconButton12_Click(object sender, EventArgs e)
         {
             panel_NuevaSolicitud.Visible = false;
         }
 
-        private void rjButton1_Click(object sender, EventArgs e)
+        private void iconButton11_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
         {
             if (solicitudEntidad.Estado == 0)
             {
@@ -321,7 +318,7 @@ namespace Presentacion
             }
         }
 
-        private void Enviar_Click(object sender, EventArgs e)
+        private void Enviar_Click_1(object sender, EventArgs e)
         {
             CalificacionEntidad calificacionEntidad = new CalificacionEntidad();
             calificacionEntidad.IdSol = solicitudEntidad.Id;
@@ -356,7 +353,7 @@ namespace Presentacion
             this.Close();
         }
 
-        private void richTextBox_Requisitos_Enter(object sender, EventArgs e)
+        private void richTextBox_Requisitos_Enter_1(object sender, EventArgs e)
         {
             if (richTextBox_Requisitos.Text == "Escriba todo lo necesitado para solicionar el problema(heramientas, programas etc.)")
             {
@@ -364,7 +361,7 @@ namespace Presentacion
             }
         }
 
-        private void rjButton_EnviarRes_Click(object sender, EventArgs e)
+        private void rjButton_EnviarRes_Click_1(object sender, EventArgs e)
         {
             if (richTextBox_Requisitos.Text != "")
             {
@@ -385,7 +382,7 @@ namespace Presentacion
             {
                 MessageBox.Show("Aun no ha escrito su respuesta");
             }
-        }
 
+        }
     }
 }

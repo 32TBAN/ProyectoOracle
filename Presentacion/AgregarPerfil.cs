@@ -44,7 +44,7 @@ namespace Presentacion
                     usuarioEntidad.Apellido = rjTextBox_Apellido.Texts;
                     usuarioEntidad.Nickname = rjTextBox_nICKNAME.Texts;
                     usuarioEntidad.Contraseña = rjTextBox_Contrasenia.Texts;
-                    usuarioEntidad.NumPerfil = ((TipoPerfilEntidad)(comboBox_TipoPerfil.SelectedValue)).Id;
+                    usuarioEntidad.NumPerfil = ((TipoPerfilEntidad)(comboBox_TipoPerfil.SelectedItem)).Id;
 
                     UsuarioEntidad usuarioEntidadRespadldo = usuarioEntidad;
                     usuarioEntidad = UsuarioNegocio.Guardar(usuarioEntidad);
@@ -92,7 +92,7 @@ namespace Presentacion
                 {
                     foreach (var item in comboBox_TipoPerfil.Items)
                     {
-                        if (item.ToString().Equals(comboBox_TipoPerfil.Text))
+                        if ( ((TipoPerfilEntidad)item).Tipo == comboBox_TipoPerfil.Text) 
                         {
                             return true;
                         }

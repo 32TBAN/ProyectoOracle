@@ -78,12 +78,6 @@
     <Compile Include="Asignacion.Designer.cs">
       <DependentUpon>Asignacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Calificacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Calificacion.Designer.cs">
-      <DependentUpon>Calificacion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Calificar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +85,7 @@
       <DependentUpon>Calificar.cs</DependentUpon>
     </Compile>
     <Compile Include="Datos\Conexion.cs" />
+    <Compile Include="Datos\SolicitudDatos.cs" />
     <Compile Include="Datos\UsuarioDatos.cs" />
     <Compile Include="Entidades\CalificacionEntidad.cs" />
     <Compile Include="Entidades\SolicitudEntidad.cs" />
@@ -114,6 +109,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Revicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revicion.Designer.cs">
+      <DependentUpon>Revicion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Solicitudes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +152,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Revicion.resx">
+      <DependentUpon>Revicion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Solicitudes.resx">
       <DependentUpon>Solicitudes.cs</DependentUpon>
     </EmbeddedResource>

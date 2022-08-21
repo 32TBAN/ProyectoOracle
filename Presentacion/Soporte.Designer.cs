@@ -63,7 +63,7 @@
             // 
             // panel_Contendor
             // 
-            this.panel_Contendor.BackColor = System.Drawing.Color.White;
+            this.panel_Contendor.BackColor = System.Drawing.Color.Black;
             this.panel_Contendor.Controls.Add(this.label_Solicitud);
             this.panel_Contendor.Controls.Add(this.panel_NuevaSolicitud);
             this.panel_Contendor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -76,7 +76,7 @@
             // 
             this.label_Solicitud.AutoSize = true;
             this.label_Solicitud.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Solicitud.ForeColor = System.Drawing.Color.Black;
+            this.label_Solicitud.ForeColor = System.Drawing.Color.White;
             this.label_Solicitud.Location = new System.Drawing.Point(14, 133);
             this.label_Solicitud.Name = "label_Solicitud";
             this.label_Solicitud.Size = new System.Drawing.Size(224, 25);
@@ -86,6 +86,7 @@
             // panel_NuevaSolicitud
             // 
             this.panel_NuevaSolicitud.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_NuevaSolicitud.BackColor = System.Drawing.Color.Black;
             this.panel_NuevaSolicitud.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_NuevaSolicitud.Controls.Add(this.rjComboBox_Area);
             this.panel_NuevaSolicitud.Controls.Add(this.label6);
@@ -111,7 +112,7 @@
             // 
             // rjComboBox_Area
             // 
-            this.rjComboBox_Area.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rjComboBox_Area.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.rjComboBox_Area.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.rjComboBox_Area.BorderSize = 0;
             this.rjComboBox_Area.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
@@ -135,7 +136,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(3, 289);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 18);
@@ -171,7 +172,7 @@
             // 
             // rjComboBox_Dispositivo
             // 
-            this.rjComboBox_Dispositivo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rjComboBox_Dispositivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.rjComboBox_Dispositivo.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.rjComboBox_Dispositivo.BorderSize = 0;
             this.rjComboBox_Dispositivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
@@ -194,7 +195,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(3, 245);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 18);
@@ -203,7 +204,7 @@
             // 
             // rjComboBox_Urgencia
             // 
-            this.rjComboBox_Urgencia.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rjComboBox_Urgencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.rjComboBox_Urgencia.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.rjComboBox_Urgencia.BorderSize = 0;
             this.rjComboBox_Urgencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
@@ -227,7 +228,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(3, 196);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 18);
@@ -238,7 +239,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 18);
@@ -282,8 +283,9 @@
             // 
             // richTextBox_Descripcion
             // 
-            this.richTextBox_Descripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(242)))));
+            this.richTextBox_Descripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.richTextBox_Descripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_Descripcion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox_Descripcion.Location = new System.Drawing.Point(96, 76);
             this.richTextBox_Descripcion.Name = "richTextBox_Descripcion";
             this.richTextBox_Descripcion.Size = new System.Drawing.Size(299, 102);
@@ -294,7 +296,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(3, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 18);
@@ -303,6 +305,7 @@
             // 
             // textBox_Asunto
             // 
+            this.textBox_Asunto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.textBox_Asunto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Asunto.Location = new System.Drawing.Point(96, 40);
             this.textBox_Asunto.Multiline = true;
@@ -312,7 +315,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel7.Controls.Add(this.iconButton3);
             this.panel7.Controls.Add(this.label1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
@@ -340,7 +343,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 18);
@@ -349,7 +352,7 @@
             // 
             // panel_Cabezera
             // 
-            this.panel_Cabezera.BackColor = System.Drawing.Color.White;
+            this.panel_Cabezera.BackColor = System.Drawing.Color.Black;
             this.panel_Cabezera.Controls.Add(this.iconButton_SolicituAsig);
             this.panel_Cabezera.Controls.Add(this.iconButton1);
             this.panel_Cabezera.Controls.Add(this.iconButton_Pincipal);
@@ -365,7 +368,7 @@
             this.iconButton_SolicituAsig.FlatAppearance.BorderSize = 0;
             this.iconButton_SolicituAsig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton_SolicituAsig.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton_SolicituAsig.ForeColor = System.Drawing.Color.Black;
+            this.iconButton_SolicituAsig.ForeColor = System.Drawing.Color.White;
             this.iconButton_SolicituAsig.IconChar = FontAwesome.Sharp.IconChar.EnvelopeCircleCheck;
             this.iconButton_SolicituAsig.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(207)))), ((int)(((byte)(141)))));
             this.iconButton_SolicituAsig.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -389,7 +392,7 @@
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Black;
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.EnvelopeCircleCheck;
             this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(207)))), ((int)(((byte)(141)))));
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -413,7 +416,7 @@
             this.iconButton_Pincipal.FlatAppearance.BorderSize = 0;
             this.iconButton_Pincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton_Pincipal.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton_Pincipal.ForeColor = System.Drawing.Color.Black;
+            this.iconButton_Pincipal.ForeColor = System.Drawing.Color.White;
             this.iconButton_Pincipal.IconChar = FontAwesome.Sharp.IconChar.Calendar;
             this.iconButton_Pincipal.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(207)))), ((int)(((byte)(141)))));
             this.iconButton_Pincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -434,7 +437,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.iconButton_NUebasol);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -448,7 +451,7 @@
             this.iconButton_NUebasol.FlatAppearance.BorderSize = 0;
             this.iconButton_NUebasol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton_NUebasol.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton_NUebasol.ForeColor = System.Drawing.Color.Black;
+            this.iconButton_NUebasol.ForeColor = System.Drawing.Color.White;
             this.iconButton_NUebasol.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.iconButton_NUebasol.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(207)))), ((int)(((byte)(141)))));
             this.iconButton_NUebasol.IconFont = FontAwesome.Sharp.IconFont.Auto;

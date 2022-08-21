@@ -45,6 +45,9 @@ namespace Presentacion
                 iconButton_Agregar.Visible = false;
                 iconButton_ASIGNAR.Visible = false;
                 iconButton_revisar.Visible = false;
+                iconButton11.Visible = false;
+                iconButton9.Visible = false;
+                iconButton7.Visible = false;
             }
             else if (usuarioEntidad.NumPerfil == 2)
             {
@@ -258,7 +261,7 @@ namespace Presentacion
         private void iconButton6_Click(object sender, EventArgs e)
         {
             ActivateButton(sender,RGBColors.color2);
-            AbrirFormularios(new Soporte());
+            AbrirFormularios(new Soporte(usuarioEntidad));
         }
 
         private void iconButton_ASIGNAR_Click(object sender, EventArgs e)
